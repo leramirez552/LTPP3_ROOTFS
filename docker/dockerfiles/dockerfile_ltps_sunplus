@@ -11,7 +11,7 @@ LABEL repository:tag="ltps_sunplus:latest"
 ARG DEBIAN_FRONTEND=noninteractive
 
 #---Retrieve files from Git
-RUN cd ~ && git clone https://github.com/tibbotech/LTPP3_ROOTFS.git
+RUN cd ~ && git clone  -b change_kernel https://github.com/tibbotech/LTPP3_ROOTFS.git
 
 #---Run Sunplus installation and Configuration
 RUN cd ~ && ~/LTPP3_ROOTFS/sunplus_inst.sh
