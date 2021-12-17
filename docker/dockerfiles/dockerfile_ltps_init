@@ -32,7 +32,7 @@ RUN apt -y install	bison			        \
                     curl                    \
                     apt-utils		        \
                     dbus			        \ 
-                    networkd-dispatcher 
+                    networkd-dispatcher     \
 
 #---Fixing ERROR regarding dpkg
 RUN apt-get -y reinstall gconf2 && dpkg-reconfigure gconf2 && dpkg --configure -a && apt-get -y install -f
@@ -57,7 +57,7 @@ RUN apt-get -y install cmake                \
                     build-essential	        \
                     gdb-multiarch           \
                     cppcheck                \
-                    python3-pip
+                    python3-pip             \
 
 #---Installing development-related apps with pip3:
 RUN pip3 install flawfinder
@@ -81,3 +81,4 @@ RUN apt-get -y upgrade
 RUN git config --global user.email "bot@tibbo.com"
 RUN git config --global user.name "Tibbo Builder"
 RUN git config merge.renamelimit 999999
+
