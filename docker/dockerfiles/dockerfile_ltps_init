@@ -46,8 +46,8 @@ RUN apt-get -y install net-tools            \
                     iputils-ping            \ 
                     iproute2                \
                     iproute2-doc            \ 
-                    netplan.io              \  
-                    openssh-server	    
+                    netplan.io              \
+                    openssh-server          \
 
 #---Installing development-related apps:
 RUN apt-get -y install cmake                \
