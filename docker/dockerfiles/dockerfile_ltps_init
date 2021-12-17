@@ -77,3 +77,6 @@ CMD ["/usr/sbin/sshd", "-D"]
 #---Update and Upgrade
 RUN apt-get -y update
 RUN apt-get -y upgrade
+
+RUN git config --global user.email "bot@tibbo.com"
+RUN git config --global user.name "Tibbo Builder"
