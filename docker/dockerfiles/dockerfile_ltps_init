@@ -46,7 +46,7 @@ RUN apt-get -y install net-tools            \
                     iputils-ping            \ 
                     iproute2                \
                     iproute2-doc            \ 
-                    netplan.io              \ 
+                    netplan.io              \  
                     openssh-server	    
 
 #---Installing development-related apps:
@@ -80,3 +80,4 @@ RUN apt-get -y upgrade
 
 RUN git config --global user.email "bot@tibbo.com"
 RUN git config --global user.name "Tibbo Builder"
+RUN git config merge.renamelimit 999999
