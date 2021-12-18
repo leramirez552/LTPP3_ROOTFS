@@ -80,5 +80,5 @@ RUN apt-get -y upgrade
 
 RUN git config --global user.email "bot@tibbo.com"
 RUN git config --global user.name "Tibbo Builder"
-RUN git config merge.renamelimit 999999
+RUN git config --global merge.renamelimit 999999
 
