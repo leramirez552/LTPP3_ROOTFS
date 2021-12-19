@@ -116,7 +116,9 @@ echo -e "\r"
 git submodule update --init --recursive
 git submodule update --remote --merge
 git submodule foreach --recursive git checkout master
-git checkout 03645855a9a533cda7c4324072ef51d1fcfb8f7f
+git checkout b90b1a8694c056e1d5defecdb1bdf28df4184dee
+cd ${sunplus_dir}/linux/kernel
+git checkout 268e3fe2c2d9a644c7fa5dd8e587e4c4c0a31991
 
 echo -e "\r"
 echo ">Navigating to ${sunplus_dir}"
@@ -127,7 +129,7 @@ press_any_key__func
 echo -e "\r"
 echo "---Executing: <make config <<< 2>---"
 echo -e "\r"
-make config <<< 2 		#Select: [2] LTPP3G2 Board
+make config <<< 2 1		#Select: [2] LTPP3G2 Board
 
 press_any_key__func
 echo -e "\r"
