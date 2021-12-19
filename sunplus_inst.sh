@@ -125,6 +125,26 @@ echo ">Navigating to ${sunplus_dir}"
 echo -e "\r"
 cd ${sunplus_dir}
 
+
+echo -e "\r"
+echo -e "---Kernel Configuration File"
+echo -e ">Copying: ${make_menuconfig_filename}"
+echo -e ">from: ${home_lttp3rootfs_kernel_makeconfig_dir}"
+echo -e ">to: ${SP7xxx_linux_kernel_dir}"
+echo -e ">as: ${make_menuconfig_default_filename}"
+echo -e "\r"
+echo -e "\r"
+make_menuconfig_filename="armhf_kernel.config"
+make_menuconfig_default_filename=".config"
+SP7xxx_dir=${home_dir}/SP7021
+SP7xxx_linux_kernel_dir=${SP7xxx_dir}/linux/kernel
+home_lttp3rootfs_dir=${home_dir}/LTPP3_ROOTFS
+home_lttp3rootfs_kernel_dir=${home_lttp3rootfs_dir}/kernel
+home_lttp3rootfs_kernel_makeconfig_dir=${home_lttp3rootfs_kernel_dir}/makeconfig
+src_make_menuconfig_fpath=${home_lttp3rootfs_kernel_makeconfig_dir}/${make_menuconfig_filename}
+dst_make_menuconfig_fpath=${SP7xxx_linux_kernel_dir}/${make_menuconfig_default_filename}
+cp ${src_make_menuconfig_fpath} ${dst_make_menuconfig_fpath}
+
 press_any_key__func
 echo -e "\r"
 echo "---Executing: <make config <<< 2>---"
