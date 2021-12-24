@@ -116,7 +116,6 @@ echo -e "\r"
 git submodule update --init --recursive
 git submodule update --remote --merge
 git submodule foreach --recursive git checkout master
-git checkout b90b1a8694c056e1d5defecdb1bdf28df4184dee
 cd ${sunplus_dir}/linux/kernel
 git checkout 268e3fe2c2d9a644c7fa5dd8e587e4c4c0a31991
 
