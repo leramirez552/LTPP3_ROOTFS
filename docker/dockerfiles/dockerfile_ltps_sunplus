@@ -23,6 +23,6 @@ ENV CONTAINER_ENV2=${DOCKER_ARG2}
 #---Set ENVIRONMENT VARIABLE TO BE USED IN THIS DOCKERFILE
 ENV DOCKERFILE_ENV1=${DOCKER_ARG3}
 #---Retrieve files from Git
-RUN cd ~ && git clone ${DOCKERFILE_ENV1}
+RUN cd ~ && git clone https://github.com/leramirez552/LTPP3_ROOTFS.git
 #---Run Sunplus installation and Configuration
 RUN cd ~ && ~/LTPP3_ROOTFS/sunplus_inst.sh
